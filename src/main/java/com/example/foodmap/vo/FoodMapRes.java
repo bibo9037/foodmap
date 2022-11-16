@@ -13,6 +13,8 @@ public class FoodMapRes {
 	
 	private List<Food> mealsList;
 	
+	private List<FoodMapRes> assessList;
+	
 	private String city; 
 	
 	@JsonInclude(JsonInclude.Include.NON_DEFAULT)		//不顯示為0的內容
@@ -115,6 +117,14 @@ public class FoodMapRes {
 
 	public void setStore(Store store) {
 		this.store = store;
+	}
+
+	public List<FoodMapRes> getAssessList() {
+		return assessList;
+	}
+
+	public void setAssessList(List<FoodMapRes> assessList) {
+		this.assessList = assessList;
 	}
 
 

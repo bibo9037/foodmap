@@ -13,10 +13,16 @@ public interface FoodDao extends JpaRepository<Food, Food_Id> {
 
 	public List<Food> findByStore(String store);
 	
-//	public List<Food> findStoreAssessAndMealsAssessGreaterThan(double storeAssess, int mealsAssess);
-	
 	public int findMealsAssessByStore(int mealsAssess);
-	
-	public List<Food> findByMealsAssess(int mealsAssess);
+
+	public List<Food> findByStoreAndMealsAssessGreaterThanEqualOrderByMealsAssessDesc(String store,int mealsAssess);
 	
 }
+
+
+
+//public List<Food> findByMealsAssess(int mealsAssess);
+
+//public List<Food> findByMeals(String meals);
+
+//public List<Food> findByMealsAssessGreaterThanEqual(int mealsAssess);
