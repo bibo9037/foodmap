@@ -24,11 +24,11 @@ public class FoodMaptest {
 	public void findByCity() {
 //		List<Store> findByCity = storeDao.findByCity("台南市");
 //		System.out.println(findByCity);
-		 List<Food> foodList =  foodDao.findByStoreAndMealsAssessGreaterThanEqualOrderByMealsAssessDesc("好吃", 3);
-		 for(Food food : foodList ) {
-			 System.out.printf("商店名稱:%s  餐點名稱:%s  價格:%d  餐點評價:%d %n",food.getStore(),food.getMeals(),food.getMealsPrice(),food.getMealsAssess());
-		 }
-		
+//		 List<Food> foodList =  foodDao.findByStoreNameAndMealsAssessGreaterThanEqualOrderByMealsAssessDesc("好吃", 3);
+//		 for(Food food : foodList ) {
+//			 System.out.printf("商店名稱:%s  餐點名稱:%s  價格:%d  餐點評價:%d %n",food.getStoreName(),food.getMealsName(),food.getMealsPrice(),food.getMealsAssess());
+//		 }
+//		
 	}
 //	
 //	@Test

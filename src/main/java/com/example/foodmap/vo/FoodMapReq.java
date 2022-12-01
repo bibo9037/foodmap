@@ -8,13 +8,13 @@ public class FoodMapReq {
 	private String city;
 	
 	@JsonProperty("store")
-	private String store;
+	private String storeName;
 
 	@JsonProperty("store_assess")
 	private double storeAssess;
 
 	@JsonProperty("meals")
-	private String meals;
+	private String mealsName;
 
 	@JsonProperty("meals_price")
 	private int mealsPrice;
@@ -24,22 +24,22 @@ public class FoodMapReq {
 	
 	private int num;
 
-	private String newStore;
+	private String newStoreName;
 	
-	private String newMeals;
+	private String newMealsName;
 	
 	public FoodMapReq() {
 
 	}
 	
-	public FoodMapReq(String store, double storeAssess, String meals, int mealsPrice, int mealsAssess) {
-		this.store = store;
+	public FoodMapReq(String storeName, double storeAssess, String mealsName, int mealsPrice, int mealsAssess) {
+		this.storeName = storeName;
 		this.storeAssess = storeAssess;
-		this.meals = meals;
+		this.mealsName = mealsName;
 		this.mealsPrice = mealsPrice;
 		this.mealsAssess = mealsAssess;
 	}
-	
+
 	public String getCity() {
 		return city;
 	}
@@ -48,12 +48,12 @@ public class FoodMapReq {
 		this.city = city;
 	}
 
-	public String getStore() {
-		return store;
+	public String getStoreName() {
+		return storeName;
 	}
 
-	public void setStore(String store) {
-		this.store = store;
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 
 	public double getStoreAssess() {
@@ -64,12 +64,12 @@ public class FoodMapReq {
 		this.storeAssess = storeAssess;
 	}
 
-	public String getMeals() {
-		return meals;
+	public String getMealsName() {
+		return mealsName;
 	}
 
-	public void setMeals(String meals) {
-		this.meals = meals;
+	public void setMealsName(String mealsName) {
+		this.mealsName = mealsName;
 	}
 
 	public int getMealsPrice() {
@@ -96,22 +96,20 @@ public class FoodMapReq {
 		this.num = num;
 	}
 
-	public String getNewStore() {
-		return newStore;
+	public String getNewStoreName() {
+		return newStoreName;
 	}
 
-	public void setNewStore(String newStore) {
-		this.newStore = newStore;
+	public void setNewStoreName(String newStoreName) {
+		this.newStoreName = newStoreName;
 	}
 
-	public String getNewMeals() {
-		return newMeals;
+	public String getNewMealsName() {
+		return newMealsName;
 	}
 
-	public void setNewMeals(String newMeals) {
-		this.newMeals = newMeals;
+	public void setNewMealsName(String newMealsName) {
+		this.newMealsName = newMealsName;
 	}
 	
-	
-
 }

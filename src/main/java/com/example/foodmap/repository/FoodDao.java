@@ -6,23 +6,16 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.foodmap.entity.Food;
-import com.example.foodmap.entity.Food_Id;
+import com.example.foodmap.entity.FoodId;
 
 @Repository
-public interface FoodDao extends JpaRepository<Food, Food_Id> {
+public interface FoodDao extends JpaRepository<Food, FoodId> {
 
-	public List<Food> findByStore(String store);
+	public List<Food> findByStoreName(String storeName);
 	
-	public int findMealsAssessByStore(int mealsAssess);
+	public List<Food> findByStoreNameIn(List<String> storeNameList);
 
-	public List<Food> findByStoreAndMealsAssessGreaterThanEqualOrderByMealsAssessDesc(String store,int mealsAssess);
+	public List<Food> findByStoreNameInAndMealsAssessGreaterThanEqualOrderByMealsAssessDesc(List<String> storeNameList, int mealsAssess);
 	
 }
 
-
-
-//public List<Food> findByMealsAssess(int mealsAssess);
-
-//public List<Food> findByMeals(String meals);
-
-//public List<Food> findByMealsAssessGreaterThanEqual(int mealsAssess);

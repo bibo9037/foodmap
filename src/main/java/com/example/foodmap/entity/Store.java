@@ -14,7 +14,7 @@ public class Store {
 
 	@Id
 	@Column(name = "store")
-	private String store; // 店家名稱
+	private String storeName; // 店家名稱
 
 	@Column(name = "store_assess")
 	private double storeAssess; // 店家評價
@@ -23,9 +23,9 @@ public class Store {
 
 	}
 
-	public Store(String city, String store) {
+	public Store(String city, String storeName) {
 		this.city = city;
-		this.store = store;
+		this.storeName = storeName;
 	}
 
 	public String getCity() {
@@ -36,12 +36,12 @@ public class Store {
 		this.city = city;
 	}
 
-	public String getStore() {
-		return store;
+	public String getStoreName() {
+		return storeName;
 	}
 
-	public void setStore(String store) {
-		this.store = store;
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 
 	public double getStoreAssess() {

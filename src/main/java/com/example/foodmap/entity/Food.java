@@ -8,16 +8,16 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "food")
-@IdClass(Food_Id.class)
+@IdClass(FoodId.class)
 public class Food {
 
 	@Id
 	@Column(name = "store")
-	private String store; // 店家名稱
+	private String storeName; // 店家名稱
 
 	@Id
 	@Column(name = "meals")
-	private String meals; // 餐點
+	private String mealsName; // 餐點
 
 	@Column(name = "meals_price")
 	private int mealsPrice; // 餐點價格
@@ -29,28 +29,28 @@ public class Food {
 
 	}
 
-	public Food(String store, String meals, int mealsPrice, int mealsAssess) {
-		this.store = store;
-		this.meals = meals;
+	public Food(String storeName, String mealsName, int mealsPrice, int mealsAssess) {
+		this.storeName = storeName;
+		this.mealsName = mealsName;
 		this.mealsPrice = mealsPrice;
 		this.mealsAssess = mealsAssess;
 	}
 	
 
-	public String getStore() {
-		return store;
+	public String getStoreName() {
+		return storeName;
 	}
 
-	public void setStore(String store) {
-		this.store = store;
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 
-	public String getMeals() {
-		return meals;
+	public String getMealsName() {
+		return mealsName;
 	}
 
-	public void setMeals(String meals) {
-		this.meals = meals;
+	public void setMealsName(String mealsName) {
+		this.mealsName = mealsName;
 	}
 
 	public int getMealsPrice() {
