@@ -121,7 +121,7 @@ public class FoodMapServiceimpl implements FoodMapService {
 
 		if (mealsAssess > 0) {																// 判斷mealsAssess的值是否大於0-->存入；若為0則表示不須修改
 			food1.setMealsAssess(mealsAssess); 												// 若值大於0，則將值設定進food1的mealsAssess(覆蓋原本的mealsAssess)
-			List<Food> foodList = foodDao.findByStoreName(storeName); 							// 設定Food資料型態的List(foodList)存放透過foodDao的findByStore方法取得的store
+			List<Food> foodList = foodDao.findByStoreName(storeName); 						// 設定Food資料型態的List(foodList)存放透過foodDao的findByStore方法取得的store
 			double totalAssess = 0;															// 設定一個為0的餐點總評價變數
 			int count = 0; 																	// 設定一個為0的品項變數
 			for (Food food : foodList) { 													// 設定變數food存放符合條件的store
@@ -132,7 +132,7 @@ public class FoodMapServiceimpl implements FoodMapService {
 			double storeAssess = (totalAssess + mealsAssess) / (count + 1); 				// 設定變數storAssess存放totalAssess加上新增的mealsAssess(若有修改評價才加)÷count(若有修改評價才加1)後的值(餐點總評價)
 			storeAssess = Math.round(storeAssess * 10.0) / 10.0; 							// 變數storeAssess為透過Math的round方法取四捨五入至小數點後 1 位的值
 
-			Optional<Store> storeOp = storeDao.findById(storeName); 							// 設定Store資料型態的Optional(storeOp)存放透過storeDao的findById方法取得的store
+			Optional<Store> storeOp = storeDao.findById(storeName); 						// 設定Store資料型態的Optional(storeOp)存放透過storeDao的findById方法取得的store
 			Store store1 = storeOp.get(); 													// 設定Store資料型態的stroe1存放storeOp的get方法取得的東西
 			store1.setStoreAssess(storeAssess); 											// 將變數storeAssess設定進store1的StoreAssess
 			storeDao.save(store1); 															// 使用storeDao的save方法存回store1

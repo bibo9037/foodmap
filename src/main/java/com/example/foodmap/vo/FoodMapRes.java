@@ -6,7 +6,7 @@ import com.example.foodmap.entity.Food;
 import com.example.foodmap.entity.Store;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-@JsonInclude(JsonInclude.Include.NON_EMPTY)				//不顯示空的或null
+//@JsonInclude(JsonInclude.Include.NON_EMPTY)				//不顯示空的或null
 public class FoodMapRes {
 	
 	private List<Store> storeList;

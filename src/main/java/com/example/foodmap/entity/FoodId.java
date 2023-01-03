@@ -4,18 +4,18 @@ import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class FoodId implements Serializable {
-	
-	private String storeName; // ©±®a¦WºÙ
 
-	private String mealsName; // À\ÂI
-	
-	public  FoodId() {
-		
+	private String storeName;
+
+	private String mealsName;
+
+	public FoodId() {
+
 	}
-	
-	public FoodId(String storeName,String meals) {
-	this.storeName = storeName;
-	this.mealsName = meals;
+
+	public FoodId(String storeName, String meals) {
+		this.storeName = storeName;
+		this.mealsName = meals;
 	}
 
 	public String getStoreName() {
@@ -34,5 +34,4 @@ public class FoodId implements Serializable {
 		this.mealsName = mealsName;
 	}
 
-	
 }
